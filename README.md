@@ -19,6 +19,7 @@ Projeto de um site institucional desenvolvido com HTML e CSS, simulando uma plat
 
 - HTML
 - CSS
+- JavaScript 
 
 ## Objetivo
 
