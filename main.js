@@ -1,17 +1,59 @@
-const form = document.getElementById("form");
-const mensagem = document.getElementById("mensagem");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  checkInputs();
+
+const form = document.getElementById("form");
+
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault()
+
+  validarCampos();
+
+   console.log("clicou no enviar");
+
+
+
 });
 
-function checkInputs() {
-  const mensagemValue = mensagem.value;
 
-  if (mensagemValue === "") {
-    alert("Erro no envio: Insira uma mensagem");
+
+//validar todos os campos
+
+function validarCampos() {
+
+  let nome = document.getElementById("nome");
+
+  let email = document.getElementById("email");
+
+  let telefone = document.getElementById("telefone");
+
+  const mensagem = document.getElementById("mensagem");
+
+  let mensagemErro = document.getElementById("mensagem-erro");
+
+
+
+  if (nome.value === "" || email.value === "" || telefone.value === "" || mensagem.value === "") {
+
+
+
+    mensagemErro.textContent = "Preencha todos os campos";
+    mensagemErro.style.color = "red";
+  
   } else {
-    alert("Obrigada!!!");
+    
+  
+   
+    mensagemErro.textContent = "Enviado com sucesso";
+    mensagemErro.style.color = "green";
+   
+    
+ 
   }
+
 }
+
+
+
+
+
+

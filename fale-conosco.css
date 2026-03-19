@@ -1,9 +1,43 @@
+/* =========================
+   RESET E CONFIGURAÇÕES GERAIS
+========================= */
+
+/* Faz o cálculo de largura incluir padding e borda */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fundo da página */
 body {
-  background: #132235;
+  background: linear-gradient(135deg, #132235, #1f3b5c);
+  font-family: Arial, Helvetica, sans-serif;
 }
-img {
-  height: 380px;
+
+
+/* =========================
+   HEADER / LOGO
+========================= */
+
+/* Área do topo */
+.topo {
+  text-align: center;
+  padding: 20px;
 }
+
+/* Logo */
+#logo {
+  width: 350px;
+  height: auto;
+  display: block;
+}
+
+
+
+/* =========================
+   TÍTULO PRINCIPAL
+========================= */
 
 .principal {
   font-size: 40px;
@@ -14,64 +48,163 @@ img {
   margin-bottom: 20px;
   text-shadow: 2px 2px #000000;
 }
-form {
-  width: 940px;
-  margin: 0 auto;
-  margin-bottom: 40px;
+
+
+/* =========================
+   FORMULÁRIO (CONTAINER)
+========================= */
+
+.form {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #dfdfdf;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Caixa interna do formulário */
 .caixa {
-  text-align: center;
-  border: 2px groove #6ddad3;
+  text-align: left;
+  border: 2px solid #6ddad3;
   padding: 20px;
+  border-radius: 8px;
 }
 
-label {
-  color: #f4f3f9;
+/* Espaçamento entre grupos de campos */
+.form-control {
+  margin-bottom: 20px;
 }
-form label {
+
+
+/* =========================
+   CAMPOS DO FORMULÁRIO
+========================= */
+
+/* Labels */
+.form label {
   display: block;
+  color: #000000;
   font-size: 20px;
-  margin: 0 0 20px;
+  margin-top: 10px;
 }
-form input,
-form textarea {
-  display: inline-block;
-  margin: 0 0 15px;
-  padding: 10px 20px;
-  width: 40%;
+
+/* Inputs e textarea */
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
 }
+
+/* Efeito ao focar no campo */
+.form input:focus,
+.form textarea:focus {
+  border-color: #6ddad3;
+  box-shadow: 0 0 5px #6ddad3;
+}
+
+
+/* =========================
+   BOTÃO ENVIAR
+========================= */
+
 .enviar {
-  background: #6ddad3;
-  font-size: 18px;
-  font-weight: bold;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
   border: none;
-  border-radius: 10px;
+  background: #132235;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+/* Efeito hover */
 .enviar:hover {
-  background: #f4f3f9;
-  font-size: 20px;
+  background: #6ddad3;
+  transform: scale(1.05);
 }
+
+
+/* =========================
+   MENSAGEM DE FEEDBACK
+========================= */
+
+#mensagem-erro {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
   text-align: center;
   background: url("imagens/bg.jpg");
   width: 100%;
+  padding: 20px 0;
+  margin-top: 40px;
 }
 
-footer P {
-  color: #f4f3f9;
-  text-align: center;
+/* Área dos ícones */
+.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
   padding: 20px;
 }
 
+/* Texto do footer */
+footer p {
+  color: #f4f3f9;
+  padding: 20px;
+}
+
+/* Ícones das redes sociais */
 .icon {
   width: 50px;
   height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  bottom: auto;
-  padding: 60px;
-  text-align: center;
+  margin: 0 10px;
+  padding: 0;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+  #logo {
+    height: 140px;
+  }
+
+  .principal {
+    font-size: 32px;
+  }
+
+  .form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .form label {
+    font-size: 18px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
 }
