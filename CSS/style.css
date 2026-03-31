@@ -1,0 +1,220 @@
+/* =========================
+   RESET BÁSICO
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+  background: linear-gradient(135deg, #132235, #1f3b5c);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   HEADER / TOPO
+========================= */
+
+.topo {
+  display: flex;
+  justify-content: space-between; /* logo na esquerda e menu na direita */
+  align-items: center; /* alinha verticalmente */
+  padding: 20px 40px;
+}
+
+
+
+/* Logo */
+#logo {
+  width: 350px;
+  height: auto;
+  display: block;
+}
+
+/* Menu */
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #6ddad3;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f4f3f9;
+}
+
+
+
+
+/* =========================
+   IMAGEM PRINCIPAL
+========================= */
+
+#casa1 {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+#casa1:hover {
+  transform: scale(1.03);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #f4f3f9;
+  padding: 10px;
+  text-align: center;
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h1,
+h2 {
+  text-align: center;
+  color: #f4f3f9;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+/* =========================
+   TEXTOS
+========================= */
+
+.texto {
+  text-align: center;
+  font-size: 20px;
+  color: #f4f3f9;
+  padding: 30px 40px;
+  line-height: 1.6;
+}
+
+
+
+/* =========================
+   IMAGENS SECUNDÁRIAS
+========================= */
+
+.casa23 {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.7;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.casa23:hover {
+  width: 70%;
+  opacity: 1;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  background: url("../assets/imagens/bg.jpg");
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+footer p{
+
+  color: #f4f3f9;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+/* Ícones das redes */
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.redes-sociais a {
+  font-size: 28px;
+  color: #f4f3f9;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.redes-sociais a:hover {
+  color: #c9a66b;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .topo {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  #logo {
+    width: 200px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  /* TEXTO */
+  .texto {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  /* IMAGENS */
+  .casa23 {
+    width: 80%;
+  }
+
+  .casa23:hover {
+    width: 85%;
+  }
+
+  /* TÍTULOS */
+  h1, h2 {
+    font-size: 20px;
+  }
+}
