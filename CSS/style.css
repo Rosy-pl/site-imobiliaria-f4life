@@ -141,7 +141,7 @@ h2 {
 
 footer {
   text-align: center;
-  background: url("/assets/imagens/bg.jpg");
+  background: url("assets/imagens/bg.jpg");
   padding: 20px 0;
   margin-top: 40px;
 }
